@@ -22,7 +22,7 @@ def imagem_para_base64(caminho):
     with open(caminho, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-imagem = imagem_para_base64("cachorro_onigiri_opaco.jpg")
+imagem = imagem_para_base64("cachorro_onigiri.jpg")
 
 st.markdown(f"""
     <style>
