@@ -32,16 +32,16 @@ st.markdown(f"""
         background-position: center;
         background-repeat: no-repeat;
     }}
-    </style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-    <style>
     * {{
-        color: black !important;
+        color: white !important;
+        text-shadow: 2px 2px 6px black, -2px -2px 6px black !important;
     }}
     .stChatInput textarea {{
         color: white !important;
+        text-shadow: none !important;
+    }}
+    .stChatMessage {{
+        background-color: rgba(0, 0, 0, 0.5) !important;
     }}
     </style>
 """, unsafe_allow_html=True)
@@ -83,6 +83,3 @@ if texto_usuario:
     st.chat_message("assistant", avatar="🍙").write(texto_resposta_ia)
     mensagem_ia = {"role": "assistant", "content": texto_resposta_ia}
     st.session_state["lista_mensagens"].append(mensagem_ia)
-
-
-
